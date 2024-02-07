@@ -2,7 +2,7 @@
 
 @section('main-content')
     <h1>
-        DC-COMICS
+        DC-COMICS/index() 
     </h1>
 
     <ul>

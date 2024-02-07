@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/comics', [ComicsController::class, 'index']);
-Route::get('/comics/{comic}', [ComicsController::class, 'show']);
+Route::get('/comics', [ComicsController::class, 'index'])->name('guest.comics.index');
+Route::post('/comics', [ComicsController::class, 'store'])->name('guest.comics.store');
+Route::get('/comics/create', [ComicsController::class, 'create'])->name('guest.comics.create');
+Route::get('/comics/{comic}', [ComicsController::class, 'show'])->name('guest.comics.show');
